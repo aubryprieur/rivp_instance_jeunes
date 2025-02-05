@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instance Jeunes RIVP</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
         body {
             font-family: 'Montserrat', Arial, sans-serif;
@@ -16,6 +17,10 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            position: relative; /* Nécessaire pour z-index */
+            margin-bottom: -150px; /* Conserve l'espace négatif */
+            padding-bottom: 40px; /* Ajoute de l'espace interne pour équilibrer */
+            z-index: 2; /* Assure que le formulaire est au-dessus de la wave */
         }
 
         .left-column {
@@ -100,8 +105,82 @@
             display: block;
             width: 100%;
             height: auto;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            z-index: 1; /* Assure que la wave reste en arrière-plan */
+            position: relative; /* Nécessaire pour z-index */
+        }
+        .bg-gray-50 {
+            background-color: #f9fafb; /* Correspond à bg-gray-50 */
+        }
+        .scroll-effect {
+            background: linear-gradient(45deg, #00A19B, #02638B); /* Dégradé par défaut */
+            border-radius: 50%; /* Cercle */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+        /* Style des boutons du banner */
+        .banner-buttons {
+            margin-top: 20px; /* Espacement au-dessus des boutons */
+            display: flex;
+            gap: 15px; /* Espace entre les boutons */
+            justify-content: flex-start; /* Aligne les boutons à gauche */
+            position: relative; /* Permet un ajustement précis */
+            top: 50px; /* Descend les boutons par rapport à leur position initiale */
         }
 
+        .btn-orange {
+            background-color: #E84E1B;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-orange:hover {
+            background-color: #c73f17;
+        }
+
+        .btn-primary {
+            background-color: #E9425B;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #004066;
+        }
+        #inscription {
+            z-index: 2; /* Assure que le formulaire est au-dessus de la wave */
+            position: relative; /* Nécessaire pour z-index */
+            margin-top: -220px; /* Conserve l'espace négatif */
+            padding-top: 40px; /* Ajoute de l'espace interne pour équilibrer */
+        }
+        .youtube-video-container {
+            position: relative;
+            width: 450px; /* Largeur égale à celle des images précédentes */
+            height: 250px; /* Hauteur combinée des deux images */
+            margin-top: 20px; /* Espace au-dessus de la vidéo */
+            overflow: hidden; /* Assure un contenu propre */
+            border-radius: 8px; /* Coins arrondis pour un design fluide */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour un effet esthétique */
+        }
+
+        .youtube-video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -120,8 +199,8 @@
         <!-- Banner Section -->
         <section class="banner">
             <div class="left-column">
-                <img src="img/1-min.png" alt="Jeune 1">
-                <img src="img/2-min.png" alt="Jeune 2">
+                <img src="img/2-min.png" alt="Jeune 1">
+                <img src="img/1-min.png" alt="Jeune 2">
                 <img src="img/3-min.png" alt="Jeune 3">
             </div>
             <div class="middle-column">
@@ -129,19 +208,66 @@
             </div>
             <div class="right-column">
                 <h1>Instance jeunes<br>de la RIVP</h1>
-                <div class="right-images">
-                    <img src="img/5-min.png" alt="Jeune 5">
-                    <img src="img/6-min.png" alt="Jeune 6">
+                <!-- Vidéo intégrée -->
+                <div class="youtube-video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/dId_NhY1BYk?autoplay=1&mute=1&loop=1&playlist=dId_NhY1BYk&controls=0&modestbranding=1&showinfo=0"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <!-- Ajout des boutons -->
+                <div class="banner-buttons">
+                    <a href="#inscription" class="btn-orange">Je m'inscris</a>
+                    <a href="https://instagram.com" target="_blank" class="btn-primary">Suivre sur Instagram</a>
                 </div>
             </div>
         </section>
 
+        <!-- Conditions Section -->
+        <div id="wave-top"></div>
+        <!-- Conditions Section -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Rejoins l'Instance Jeunes RIVP si :</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+
+                    <!-- Card 1 - Âge -->
+                    <div class="bg-gray-100 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-600 mb-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800">Tu as entre 16 et 25 ans</h3>
+                    </div>
+
+                    <!-- Card 2 - Résidence -->
+                    <div class="bg-gray-100 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-600 mb-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800">Tu habites une résidence de la RIVP</h3>
+                    </div>
+
+                    <!-- Card 3 - Localisation -->
+                    <div class="bg-gray-100 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-600 mb-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800">Dans le 11ème, 19ème, 20ème arrondissements et Montreuil</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
         <!-- Hero Section -->
-        <div id="wave-top"></div>
         <section class="py-20 text-gray-800">
             <div class="container mx-auto px-4 text-center">
-                <p class="text-xl mb-8 max-w-2xl mx-auto">Un lieu de rencontre et d'échange pour les jeunes de 16-25 ans des résidences RIVP des 11ème, 19ème, 20ème arrondissements et de Montreuil-sous-Bois.</p>
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Votre voix compte !</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Un espace d'échange et de rencontre pour les jeunes, afin de discuter de l'avenir de leur résidence et de proposer des projets pour améliorer la vie quotidienne.</p>
                 <div class="flex justify-center gap-4 flex-wrap">
                     <a href="#inscription" class="btn-orange">Je m'inscris</a>
                     <a href="https://instagram.com" target="_blank" class="btn-primary">Suivre sur Instagram</a>
@@ -149,18 +275,7 @@
             </div>
         </section>
         <div id="wave-bottom"></div>
-
-        <!-- About Section -->
-        <section id="about" class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="max-w-3xl mx-auto">
-                    <div class="mt-12 text-center">
-                        <h2 class="text-3xl font-bold mb-6 text-gray-800">Votre voix compte !</h2>
-                        <p class="text-gray-600">Participez aux discussions sur l'avenir de votre résidence et proposez vos projets pour améliorer la vie quotidienne.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="bg-gray-50 h-16"></div>
 
         <!-- Inscription Form -->
         <section id="inscription" class="py-16 bg-gray-50">
@@ -206,7 +321,7 @@
     </footer>
 
     <script>
-        function createWave(containerId, color) {
+        function createWave(containerId, waveColor, bgColor) {
             const container = document.getElementById(containerId);
             if (!container) {
                 console.error(`Container with ID "${containerId}" not found.`);
@@ -215,15 +330,17 @@
 
             console.log(`Creating wave in container: ${containerId}`);
             container.innerHTML = `
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="width: 100%; height: auto;">
-                    <path fill="${color}" fill-opacity="1" d="M0,224L60,224C120,224,240,224,360,218.7C480,213,600,203,720,208C840,213,960,235,1080,229.3C1200,224,1320,192,1380,176L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="width: 100%; height: auto; background: ${bgColor};">
+                    <rect x="0" y="0" width="1440" height="320" fill="${bgColor}"></rect>
+                    <path fill="${waveColor}" fill-opacity="1" d="M0,224L60,224C120,224,240,224,360,218.7C480,213,600,203,720,208C840,213,960,235,1080,229.3C1200,224,1320,192,1380,176L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
                 </svg>
             `;
         }
 
-        // Crée les vagues dynamiquement
-        createWave("wave-top", "#00A19B"); // Couleur turquoise
-        createWave("wave-bottom", "#E94E1B"); // Couleur orange
+        // Crée les vagues dynamiquement avec un fond gris clair sous la wave
+        createWave("wave-top", "#00A19B", "#FFFFFF"); // Wave top turquoise avec fond blanc
+        createWave("wave-bottom", "#E94E1B", "#F9FAFB"); // Wave bottom orange avec fond gris clair
+
 
         // Vérifie si le formulaire existe avant d'ajouter un écouteur d'événement
         document.addEventListener("DOMContentLoaded", () => {
@@ -263,7 +380,5 @@
             });
         });
     </script>
-
-
 </body>
 </html>
