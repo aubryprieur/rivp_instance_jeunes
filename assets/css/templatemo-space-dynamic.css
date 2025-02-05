@@ -196,6 +196,28 @@ body {
   color: #fe3f40;
 }
 
+.button-container {
+  display: flex;
+  gap: 10px; /* Espacement entre les boutons */
+}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px; /* Taille du cercle */
+  height: 70px;
+  background-color: white; /* Fond blanc */
+  border-radius: 50%; /* Cercle parfait */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+}
+
+.icon-circle i {
+  font-size: 30px; /* Taille de l'icône */
+  color: #fe3f40; /* Couleur des icônes */
+}
+
+
 .main-blue-button a {
   display: inline-block;
   background-color: #03a4ed;
@@ -210,7 +232,7 @@ body {
 
 .main-red-button a {
   display: inline-block;
-  background-color: #fe3f40;
+  background-color: #E94E1B;
   font-size: 15px;
   font-weight: 400;
   color: #fff;
@@ -869,7 +891,7 @@ Banner Style
 .main-banner .left-content h6 {
   text-transform: uppercase;
   font-size: 18px;
-  color: #fe3f40;
+  color: #E94E1B;
   margin-bottom: 15px;
 }
 
@@ -881,12 +903,12 @@ Banner Style
 }
 
 .main-banner .left-content h2 em {
-  color: #03a4ed;
+  color: #0C678A;
   font-style: normal;
 }
 
 .main-banner .left-content h2 span {
-  color: #fe3f40;
+  color: #E94E1B;
 }
 
 .main-banner .left-content p {
@@ -982,6 +1004,7 @@ About Us Style
 .about-us .services .item p {
   color: #fff;
 }
+
 
 
 /* 

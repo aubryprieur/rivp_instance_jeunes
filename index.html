@@ -9,6 +9,8 @@
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <title>Instance jeunes de la RIVP</title>
 
@@ -51,12 +53,12 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="#about">About Us</a></li>
-              <li class="scroll-to-section"><a href="#services">Services</a></li>
-              <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
-              <li class="scroll-to-section"><a href="#blog">Blog</a></li> 
-              <li class="scroll-to-section"><a href="#contact">Message Us</a></li> 
+              <li class="scroll-to-section"><a href="#top" class="active">Accueil</a></li>
+              <li class="scroll-to-section"><a href="#about">Les conditions</a></li>
+              <!-- <li class="scroll-to-section"><a href="#services">Services</a></li>-->
+              <li class="scroll-to-section"><a href="#portfolio">Les dates</a></li>
+              <!--<li class="scroll-to-section"><a href="#blog">Blog</a></li>-->
+              <!-- <li class="scroll-to-section"><a href="#contact">Message Us</a></li> -->
               <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">S'inscrire</a></div></li>
             </ul>        
             <a class='menu-trigger'>
@@ -79,9 +81,11 @@
               <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                 <h6>bienvenue à la première instance jeunes de la RIVP</h6>
                 <h2>Un espace <em>d'échanges et de rencontres</em> <span>pour les jeunes</span> de la RIVP</h2>
-                <p>Discutons de l'avenir des résidences et proposons des projets pour améliorer la vie quotidienne.</p>
-<div class="main-red-button"><a href="#contact">S'inscrire à la prochaine rencontre</a></div>
-<div class="main-red-button"><a href="#contact">suivre sur Instagram</a></div>
+                <p>Ensemble, échangeons sur l’avenir de nos résidences et imaginons des solutions pour un meilleur cadre de vie.</p>
+                <div class="button-container">
+                  <div class="main-red-button"><a href="#contact">S'inscrire à la prochaine rencontre</a></div>
+                  <div class="main-red-button"><a href="#contact">suivre sur Instagram</a></div>
+                </div>
               </div>
             </div>
             <div class="col-lg-6">
@@ -108,18 +112,19 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                  <div class="icon">
-                    <img src="assets/images/service-icon-01.png" alt="reporting">
+                  <div class="icon icon-circle">
+                    <i class="fas fa-smile fa-3x"></i> <!-- Icône âge -->
                   </div>
                   <div class="right-text">
+                    <br>
                     <h4>Tu as entre 16 et 25 ans</h4>
                   </div>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
-                  <div class="icon">
-                    <img src="assets/images/service-icon-02.png" alt="">
+                  <div class="icon icon-circle">
+                    <i class="fas fa-building fa-3x"></i> <!-- Icône résidence -->
                   </div>
                   <div class="right-text">
                     <h4>Tu habites une résidence de la RIVP</h4>
@@ -128,12 +133,11 @@
               </div>
               <div class="col-lg-6">
                 <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
-                  <div class="icon">
-                    <img src="assets/images/service-icon-03.png" alt="">
+                  <div class="icon icon-circle">
+                    <i class="fas fa-map-marker-alt fa-3x"></i> <!-- Icône localisation -->
                   </div>
                   <div class="right-text">
                     <h4>Dans le 11ème, 19ème, 20ème arrondissements et Montreuil</h4>
-
                   </div>
                 </div>
               </div>
@@ -144,7 +148,7 @@
     </div>
   </div>
 
-  <div id="services" class="our-services section">
+  <!-- <div id="services" class="our-services section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 align-self-center  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
@@ -186,14 +190,14 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 
   <div id="portfolio" class="our-portfolio section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-            <h2>See What Our Agency <em>Offers</em> &amp; What We <span>Provide</span></h2>
+            <h2>Les rencontres <em>passées</em> &amp; les rencontres<span> à venir</span></h2>
           </div>
         </div>
       </div>
@@ -202,8 +206,8 @@
           <a href="#">
             <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
               <div class="hidden-content">
-                <h4>SEO Analysis</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
+                <h4>Le 19 février 2025</h4>
+                <p>Lancement de la première rencontre.</p>
               </div>
               <div class="showed-content">
                 <img src="assets/images/portfolio-image.png" alt="">
@@ -215,8 +219,8 @@
           <a href="#">
             <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
               <div class="hidden-content">
-                <h4>Website Reporting</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
+                <h4>À venir</h4>
+                <p>Date de la prochaine rencontre à déterminer.</p>
               </div>
               <div class="showed-content">
                 <img src="assets/images/portfolio-image.png" alt="">
@@ -228,8 +232,8 @@
           <a href="#">
             <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
               <div class="hidden-content">
-                <h4>Performance Tests</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
+                <h4>À venir</h4>
+                <p>Date de la prochaine rencontre à déterminer.</p>
               </div>
               <div class="showed-content">
                 <img src="assets/images/portfolio-image.png" alt="">
@@ -241,8 +245,8 @@
           <a href="#">
             <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
               <div class="hidden-content">
-                <h4>Data Analysis</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
+                <h4>À venir</h4>
+                <p>Date de la prochaine rencontre à déterminer.</p>
               </div>
               <div class="showed-content">
                 <img src="assets/images/portfolio-image.png" alt="">
@@ -254,7 +258,7 @@
     </div>
   </div>
 
-  <div id="blog" class="our-blog section">
+  <!-- <div id="blog" class="our-blog section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
@@ -326,17 +330,17 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div id="contact" class="contact-us section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
           <div class="section-heading">
-            <h2>Feel Free To Send Us a Message About Your Website Needs</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doer ket eismod tempor incididunt ut labore et dolores</p>
+            <h2>Envie de participer à une rencontre ?</h2>
+            <p>Laisse-nous tes coordonnées et sois invité(e) à la prochaine session !</p>
             <div class="phone-info">
-              <h4>For any enquiry, Call Us: <span><i class="fa fa-phone"></i> <a href="#">010-020-0340</a></span></h4>
+              <h4>Tu peux également nous appeler : <span><i class="fa fa-phone"></i> <a href="#">010-020-0340</a></span></h4>
             </div>
           </div>
         </div>
@@ -345,17 +349,17 @@
             <div class="row">
               <div class="col-lg-6">
                 <fieldset>
-                  <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                  <input type="name" name="name" id="name" placeholder="Nom" autocomplete="on" required>
                 </fieldset>
               </div>
               <div class="col-lg-6">
                 <fieldset>
-                  <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
+                  <input type="surname" name="surname" id="surname" placeholder="Prénom" autocomplete="on" required>
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Ton email" required="">
                 </fieldset>
               </div>
               <div class="col-lg-12">
@@ -365,7 +369,7 @@
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <button type="submit" id="form-submit" class="main-button ">Send Message</button>
+                  <button type="submit" id="form-submit" class="main-button ">Je m'inscris</button>
                 </fieldset>
               </div>
             </div>
@@ -382,9 +386,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
-          <p>© Copyright 2021 Space Dynamic Co. All Rights Reserved. 
+          <p>© Copyright 2025 RIVP All Rights Reserved.
           
-          <br>Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
+          <br>Design: <a rel="nofollow" href="https://copas.coop">COPAS</a></p>
         </div>
       </div>
     </div>
