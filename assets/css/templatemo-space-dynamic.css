@@ -1105,6 +1105,7 @@ Portfolio
 .our-portfolio {
   padding-top: 120px;
   margin-top: 0px;
+  padding-bottom: 120px; /* Évite que le contenu dépasse */
 }
 
 .our-portfolio .section-heading h2 {
