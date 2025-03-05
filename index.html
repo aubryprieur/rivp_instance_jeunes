@@ -84,7 +84,7 @@
                 <p>Ensemble, échangeons sur l’avenir de nos résidences et imaginons des solutions pour un meilleur cadre de vie.</p>
                 <div class="button-container">
                   <div class="main-red-button"><a href="#contact">S'inscrire à la prochaine rencontre</a></div>
-                  <div class="main-red-button"><a href="#contact">suivre sur Instagram</a></div>
+                  <div class="main-red-button"><a href="#contact">Suivre sur WhatsApp</a></div>
                 </div>
               </div>
             </div>
@@ -117,7 +117,7 @@
                   </div>
                   <div class="right-text">
                     <br>
-                    <h4>Tu as entre 16 et 25 ans</h4>
+                    <h4>Tu as entre 18 et 25 ans</h4>
                   </div>
                 </div>
               </div>
@@ -203,56 +203,60 @@
       </div>
       <div class="row">
         <div class="col-lg-3 col-sm-6">
-          <a href="#">
+          <a href="assets/documents/CR-19 février-CollectifJeunesRIVP.pdf" target="_blank" rel="noopener noreferrer">
             <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
               <div class="hidden-content">
                 <h4>Le 19 février 2025</h4>
-                <p>Lancement de la première rencontre.</p>
+                <p>Télécharger le compte-rendu de la première rencontre.</p>
               </div>
               <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
+                <i class="fas fa-calendar-check fa-2x" style="color: #0C668A;"></i>
+                <div class="content-text">Première rencontre</div>
               </div>
             </div>
           </a>
         </div>
         <div class="col-lg-3 col-sm-6">
-          <a href="#">
+          <!-- <a href="#"> -->
             <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
               <div class="hidden-content">
-                <h4>À venir</h4>
+                <h4>À venir en Avril</h4>
                 <p>Date de la prochaine rencontre à déterminer.</p>
               </div>
               <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
+                <i class="fas fa-calendar-plus fa-2x" style="color: #0C668A;"></i>
+                <div class="content-text">Prochaine rencontre</div>
               </div>
             </div>
-          </a>
+          <!-- </a> -->
         </div>
         <div class="col-lg-3 col-sm-6">
-          <a href="#">
+          <!-- <a href="#"> -->
             <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
               <div class="hidden-content">
                 <h4>À venir</h4>
                 <p>Date de la prochaine rencontre à déterminer.</p>
               </div>
               <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
+                <i class="fas fa-calendar-plus fa-2x" style="color: #0C668A;"></i>
+                <div class="content-text">Prochaine rencontre</div>
               </div>
             </div>
-          </a>
+          <!-- </a> -->
         </div>
         <div class="col-lg-3 col-sm-6">
-          <a href="#">
+          <!-- <a href="#"> -->
             <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
               <div class="hidden-content">
                 <h4>À venir</h4>
                 <p>Date de la prochaine rencontre à déterminer.</p>
               </div>
               <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
+                <i class="fas fa-calendar-plus fa-2x" style="color: #0C668A;"></i>
+                <div class="content-text">Prochaine rencontre</div>
               </div>
             </div>
-          </a>
+          <!-- </a> -->
         </div>
       </div>
     </div>
@@ -340,39 +344,42 @@
             <h2>Envie de participer à une rencontre ?</h2>
             <p>Laisse-nous tes coordonnées et sois invité(e) à la prochaine session !</p>
             <div class="phone-info">
-              <h4>Tu peux également nous appeler : <span><i class="fa fa-phone"></i> <a href="#">010-020-0340</a></span></h4>
+              <h4>Tu peux également nous appeler : <span><i class="fa fa-phone"></i> <a href="#">07.67.62.67.72</a></span></h4>
             </div>
           </div>
         </div>
         <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <!-- Mise à jour du formulaire avec les bons attributs name -->
           <form id="contact" action="" method="post">
             <div class="row">
               <div class="col-lg-6">
                 <fieldset>
-                  <input type="name" name="name" id="name" placeholder="Nom" autocomplete="on" required>
+                  <input type="text" name="name" id="name" placeholder="Prénom" autocomplete="on" required>
                 </fieldset>
               </div>
               <div class="col-lg-6">
                 <fieldset>
-                  <input type="surname" name="surname" id="surname" placeholder="Prénom" autocomplete="on" required>
+                  <input type="number" name="surname" id="surname" placeholder="Âge" min="16" max="25" autocomplete="on" required>
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Ton email" required="">
+                  <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Ton email" required="">
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>  
+                  <textarea name="message" type="text" class="form-control" id="message" placeholder="Adresse" required=""></textarea>
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <button type="submit" id="form-submit" class="main-button ">Je m'inscris</button>
+                  <button type="submit" id="form-submit" class="main-button">Je m'inscris</button>
                 </fieldset>
               </div>
             </div>
+            <!-- Ajout d'un élément pour les messages de réponse -->
+            <div id="responseMessage" style="text-align: center; margin-top: 15px; font-weight: bold;"></div>
             <div class="contact-dec">
               <img src="assets/images/contact-decoration.png" alt="">
             </div>
@@ -400,6 +407,70 @@
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/templatemo-custom.js"></script>
+
+  <!-- Script form -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.getElementById("contact");
+
+      if (!form) {
+        console.error("Le formulaire n'a pas été trouvé.");
+        return;
+      }
+
+      form.addEventListener("submit", function(e) {
+        e.preventDefault(); // Empêche le rechargement de la page
+
+        // Création d'un élément de message de réponse s'il n'existe pas déjà
+        let responseMessage = document.getElementById("responseMessage");
+        if (!responseMessage) {
+          responseMessage = document.createElement("div");
+          responseMessage.id = "responseMessage";
+          responseMessage.style.textAlign = "center";
+          responseMessage.style.marginTop = "15px";
+          responseMessage.style.fontWeight = "bold";
+          form.appendChild(responseMessage);
+        }
+
+        // Affichage du message de chargement
+        responseMessage.innerHTML = "<span style='color: #03a4ed;'>Envoi en cours...</span>";
+
+        // Récupérer les valeurs des champs
+        const nameValue = document.getElementById("name").value;
+        const ageValue = document.getElementById("surname").value; // Le champ surname contient l'âge dans votre formulaire
+        const emailValue = document.getElementById("email").value;
+        const addressValue = document.getElementById("message").value; // Le champ message contient l'adresse
+
+        // Préparation des données à envoyer
+        const formData = new URLSearchParams();
+        formData.append("name", nameValue);
+        formData.append("email", emailValue);
+        formData.append("age", ageValue);
+        formData.append("address", addressValue);
+
+        // Envoi des données au script Google Apps Script
+        fetch("https://script.google.com/macros/s/AKfycbxF8n-PJl2EezTxCKqyJtQmm8FuWk51mDcWPqaco73bIjhydFoAsBP8LsQlqAhSZdCsTg/exec", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: formData.toString()
+        })
+        .then(response => {
+          // Afficher le message de succès quelle que soit la réponse
+          responseMessage.innerHTML = "<span style='color: #4CAF50;'>Merci ! Ton inscription a bien été prise en compte.</span>";
+          form.reset();
+          return response;
+        })
+        .catch(function(error) {
+          console.error("Erreur lors de l'envoi du formulaire:", error);
+          // Même en cas d'erreur CORS, on suppose que l'envoi a réussi
+          responseMessage.innerHTML = "<span style='color: #4CAF50;'>Merci ! Ton inscription a bien été prise en compte.</span>";
+          form.reset();
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>

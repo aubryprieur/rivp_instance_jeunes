@@ -178,7 +178,7 @@ body {
 
 .section-heading h2 {
   font-size: 30px;
-  text-transform: capitalize;
+/*  text-transform: capitalize;*/
   color: #2a2a2a;
   font-weight: 700;
   letter-spacing: 0.25px;
@@ -224,7 +224,7 @@ body {
   font-size: 15px;
   font-weight: 400;
   color: #fff;
-  text-transform: capitalize;
+/*  text-transform: capitalize;*/
   padding: 12px 25px;
   border-radius: 23px;
   letter-spacing: 0.25px;
@@ -236,7 +236,7 @@ body {
   font-size: 15px;
   font-weight: 400;
   color: #fff;
-  text-transform: capitalize;
+/*  text-transform: capitalize;*/
   padding: 12px 25px;
   border-radius: 23px;
   letter-spacing: 0.25px;
@@ -248,7 +248,7 @@ body {
   font-size: 15px;
   font-weight: 400;
   color: #fe3f40;
-  text-transform: capitalize;
+/*  text-transform: capitalize;*/
   padding: 12px 25px;
   border-radius: 23px;
   letter-spacing: 0.25px;
@@ -381,7 +381,7 @@ header
   font-weight: 500;
   font-size: 15px;
   color: #2a2a2a;
-  text-transform: capitalize;
+/*  text-transform: capitalize;*/
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -931,7 +931,7 @@ Banner Style
   font-size: 15px;
   font-weight: 500;
   color: #fe3f40;
-  text-transform: capitalize;
+/*  text-transform: capitalize;*/
   padding: 12px 25px;
   border-radius: 23px;
   letter-spacing: 0.25px;
@@ -1425,7 +1425,7 @@ form#contact button {
   font-size: 15px;
   font-weight: 400;
   color: #fff;
-  text-transform: capitalize;
+/*  text-transform: capitalize;*/
   padding: 12px 25px;
   border-radius: 23px;
   letter-spacing: 0.25px;
@@ -1599,4 +1599,69 @@ responsive
   .phone-info h4 span i {
     margin-left: 0px;
   }
+}
+
+/* Style pour le texte dans les div "showed-content" */
+.showed-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Ajustez selon vos besoins */
+  background-color: #f0f0f0; /* Couleur de fond, à adapter */
+  border-radius: 10px; /* Pour arrondir les coins */
+  overflow: hidden;
+}
+
+.content-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2a2a2a;
+  text-align: center;
+  padding: 20px;
+}
+
+.showed-content:hover .content-text {
+  color: #03a4ed; /* Change la couleur du texte au survol */
+  transition: all 0.3s;
+}
+
+/* CSS pour masquer l'image about-left-image.png sur les petits écrans */
+@media (max-width: 991px) {
+  .about-us .left-image {
+    display: none;
+  }
+}
+
+/* Optionnel : ajuster la largeur de la colonne de droite quand l'image est masquée */
+@media (max-width: 991px) {
+  .about-us .col-lg-8 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Solution simple avec padding-top pour descendre le titre sur petit écran */
+@media (max-width: 767px) {
+  .contact-us .section-heading {
+    padding-top: 50px; /* Ajustez cette valeur selon vos besoins */
+  }
+}
+
+/* icones pour showed-content */
+.content-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.content-text i {
+  color: #0C668A !important; /* Couleur orange comme celle des boutons */
+  margin-bottom: 5px;
+}
+
+.showed-content:hover .content-text i {
+  color: #E94E1B !important; /* Change la couleur de l'icône au survol (bleu) */
+  transition: all 0.3s;
 }
