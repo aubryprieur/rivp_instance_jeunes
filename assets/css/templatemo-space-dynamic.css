@@ -1665,3 +1665,30 @@ responsive
   color: #E94E1B !important; /* Change la couleur de l'icône au survol (bleu) */
   transition: all 0.3s;
 }
+
+/* Logo responsive */
+
+/* Garder le comportement par défaut sur les grands écrans */
+.header-area .main-nav .logo {
+  /* On ne modifie pas la propriété line-height existante */
+}
+
+/* Seulement sur les petits écrans */
+@media (max-width: 767px) {
+  .header-area .main-nav .logo {
+    /* On utilise les propriétés d'origine mais on corrige juste la taille */
+    line-height: 80px; /* Même valeur que la hauteur du header sur mobile */
+  }
+
+  .header-area .main-nav .logo img {
+    height: 25px; /* Taille réduite sur mobile */
+    vertical-align: middle; /* Aligne verticalement l'image */
+  }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+  .header-area .main-nav .logo img {
+    height: 20px; /* Taille encore plus petite pour les téléphones */
+  }
+}
