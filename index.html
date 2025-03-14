@@ -1,44 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
   <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <meta name="description" content="Collectif jeunes de la RIVP - Un espace d'échanges et de rencontres pour les jeunes de la RIVP dans le 11ème, 19ème, 20ème arrondissements et Montreuil">
     <title>Collectif jeunes de la RIVP</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS CRITIQUE INLINE - Styles minimaux pour l'affichage initial -->
+    <style>
+      /* CSS critique minimale pour le rendu initial */
+      body {
+        font-family: sans-serif; /* Police de fallback */
+        margin: 0;
+        padding: 0;
+      }
+      .header-area {
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        height: 80px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      }
+      .logo img {
+        height: 40px;
+        width: auto;
+      }
+      .main-banner {
+        padding-top: 100px;
+        background-color: #f7f7f7;
+      }
+      h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+      .main-red-button a {
+        display: inline-block;
+        background-color: #e75e57;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+      }
+    </style>
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <!-- Script pour charger CSS de façon asynchrone -->
+    <script>
+      /* Petit script pour gérer le chargement asynchrone du CSS */
+      !function(e){"use strict";var t=function(t,n,r,o){var i,a=e.document,d=a.createElement("link");if(n)i=n;else{var f=(a.body||a.getElementsByTagName("head")[0]).childNodes;i=f[f.length-1]}var l=a.styleSheets;if(o)for(var s in o)o.hasOwnProperty(s)&&d.setAttribute(s,o[s]);d.rel="stylesheet",d.href=t,d.media="only x",function e(t){if(a.body)return t();setTimeout(function(){e(t)})}(function(){i.parentNode.insertBefore(d,n?i:i.nextSibling)});var u=function(e){for(var t=d.href,n=l.length;--n>=0;)if(l[n].href===t)return e();setTimeout(function(){u(e)})};function c(){d.addEventListener&&d.removeEventListener("load",c),d.media=r||"all"}return d.addEventListener&&d.addEventListener("load",c),d.onloadcssdefined=u,u(c),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
+    </script>
 
+    <!-- Préchargement de la police avec preconnect -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Préchargement des CSS principaux -->
+    <link rel="preload" href="vendor/bootstrap/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="assets/css/templatemo-space-dynamic.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style">
+
+    <!-- Chargement asynchrone des CSS -->
+    <script>
+      // Chargement des CSS non-critiques de façon asynchrone
+      loadCSS("vendor/bootstrap/css/bootstrap.min.css");
+      loadCSS("assets/css/templatemo-space-dynamic.css");
+      loadCSS("assets/css/animated.css");
+      loadCSS("assets/css/owl.css");
+      loadCSS("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+      // Chargement asynchrone des polices Google
+      loadCSS("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </script>
+
+    <!-- Fallbacks pour les navigateurs sans JavaScript -->
+    <noscript>
+      <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
+      <link rel="stylesheet" href="assets/css/animated.css">
+      <link rel="stylesheet" href="assets/css/owl.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    </noscript>
+
+    <!-- Préchargement de l'image principale pour LCP -->
+    <link rel="preload" href="assets/images/1-min.webp" as="image" fetchpriority="high">
   </head>
 
 <body>
-
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
@@ -399,13 +448,6 @@
       </div>
     </div>
   </footer>
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/templatemo-custom.js"></script>
 
   <!-- Script form -->
   <script>
@@ -468,6 +510,21 @@
           form.reset();
         });
       });
+    });
+  </script>
+
+  <!-- Scripts chargés de façon différée -->
+  <script defer src="vendor/jquery/jquery.min.js"></script>
+  <script defer src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/js/owl-carousel.js"></script>
+  <script defer src="assets/js/animation.js"></script>
+  <script defer src="assets/js/imagesloaded.js"></script>
+  <script defer src="assets/js/templatemo-custom.js"></script>
+
+  <!-- Script du formulaire -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Votre code de formulaire existant
     });
   </script>
 
