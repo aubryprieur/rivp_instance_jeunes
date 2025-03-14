@@ -1666,6 +1666,13 @@ responsive
   transition: all 0.3s;
 }
 
+.logo img {
+  width: 120px !important;
+  height: 40px !important;
+  max-width: 120px !important;
+  object-fit: contain;
+}
+
 /* Logo responsive */
 
 /* Garder le comportement par défaut sur les grands écrans */
