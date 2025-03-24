@@ -634,10 +634,11 @@ header
 }
 
 @media (max-width: 992px) {
-  .header-area .main-nav .nav li:last-child  ,
+  /* On enlève le masquage du dernier lien */
+  /* .header-area .main-nav .nav li:last-child,
   .background-header .main-nav .nav li:last-child {
     display: none;
-  }
+  } */
   .header-area .main-nav .nav li:nth-child(6),
   .background-header .main-nav .nav li:nth-child(6) {
     padding-right: 0px;
@@ -1844,3 +1845,48 @@ responsive
   text-align: center;
 
 }
+
+/* Par défaut (mobile), lien simple */
+.menu-inscription {
+  display: block;
+  font-weight: 500;
+  font-size: 15px;
+  color: #191a20; /* même que les autres */
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+}
+
+/* Sur grand écran : applique le style bouton */
+@media (min-width: 992px) {
+  .menu-inscription {
+    display: inline-block;
+    background-color: #E94E1B;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 23px;
+    line-height: normal;
+    height: auto;
+  }
+
+  .menu-inscription:hover {
+    background-color: #03a4ed;
+    color: #fff;
+  }
+}
+
+@media (max-width: 991px) {
+  .header-area .main-nav .nav li:last-child .menu-inscription {
+    color: #191a20 !important;
+    font-weight: 500 !important; /* même poids que les autres liens */
+  }
+}
+
+@media (max-width: 991px) {
+  .header-area .main-nav .nav li:last-child .menu-inscription:hover {
+    background: #eee !important; /* Même fond que les autres au hover */
+    color: #fe3f40 !important; /* Orange/rouge comme les autres liens */
+  }
+}
+
+
