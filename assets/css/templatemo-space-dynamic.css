@@ -1889,4 +1889,16 @@ responsive
   }
 }
 
+.right-image {
+  position: relative;
+  text-align: center; /* Centre le contenu */
+}
 
+.right-image img {
+  border-radius: 23px; /* Même valeur que pour le bouton */
+  overflow: hidden;
+  max-width: 90%;
+  height: auto; /* Maintient les proportions */
+  display: block; /* Permet de centrer l'image */
+  margin: 0 auto;
+}
